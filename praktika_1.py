@@ -153,7 +153,14 @@ for i in str:
 print(count) """
 
 ## Задача №12 Пользователь задаёт две строки. Определить количество вхождений одной строки в другой
-string_one=input('Введите первую строку: ')
+""" string_one=input('Введите первую строку: ')
 string_two=input('Введите вторую строку: ')
-for i in string_one:
-    print(i)
+i=0
+count=0
+while(i<len(string_one) or i<len(string_two)):
+    if (string_one[i]==string_two[i]):
+        i=i+1
+        count+=1
+    else:
+        i=i+1
+print(count) """
