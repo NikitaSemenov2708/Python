@@ -204,6 +204,6 @@ def f(x):
     else:
         return
 
-arg =2
+""" arg =2
 print(f(arg))
-print(type(f(arg)))
+print(type(f(arg))) """
