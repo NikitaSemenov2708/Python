@@ -98,13 +98,12 @@ arg =
 print(f(arg)) """
 
 ## Задача №7 Проверить истинность утверждения ¬(X ⋁ Y ⋁ Z) = ¬X ⋀ ¬Y ⋀ ¬Z для всех значений предикат
-""" x=1
-y=1
-z=0
-if(not(x and y and z)==(not x and not y and not z)):
-    print('Верно')
-else:
-    print("НЕ верно") """
+""" variants =[[True, True, True], [True, True, False], [True, False, True],[False, True, True]]
+print('Утверждение ¬(X ⋁ Y ⋁ Z) = ¬X ⋀ ¬Y ⋀ ¬Z')
+for i in range(len(variants)):
+    print('Для значений х={},y={},z={} результат:'.format(variants[i][0],variants[i][1],variants[i][2]), end='') ## end='' ПИШЕТ следующий принт на этойже строке
+    print(not(variants[i][0] and variants[i][1] and variants[i][2])==(not variants[i][0] or not variants[i][1] or not variants[i][2])) """
+    
     
 
 ## Задача №8 Сообщить в какой четверти координатной плоскости или на какой оси находится точка с координатами Х и У 
@@ -137,8 +136,16 @@ print(f(0,0,1,0))  """
 ## Задача №10 Напишите программу, которая выводит нечетные числа из заданного списка и останавливается, если встречает число 554.
 """ numbers = [1, 2, 3, 4, 5, 657, 253, 157, 554, 101]
 for i in numbers:
-    print(i)
-    if (i==554): break """
+    if i % 2 !=0:
+        print(i)
+    if (i==554): break  """
+
+""" number=0
+list = []
+while number!=554:
+    number=int(input('Введите число: '))
+    if number%2 !=0: list.append(number)## Добавляет в конец списка лист
+print(list) """
 
 
 ## Задача №11 Сложить числа вещественного числа
@@ -153,14 +160,51 @@ for i in str:
 print(count) """
 
 ## Задача №12 Пользователь задаёт две строки. Определить количество вхождений одной строки в другой
-""" string_one=input('Введите первую строку: ')
-string_two=input('Введите вторую строку: ')
-i=0
+
+""" string_one=input('Введите первую строку: ').split(' ')
+string_two=input('Введите вторую строку: ').split(' ')
 count=0
-while(i<len(string_one) or i<len(string_two)):
-    if (string_one[i]==string_two[i]):
-        i=i+1
-        count+=1
-    else:
-        i=i+1
+
+
+for i in range(len(string_one)):
+    for j in range(len(string_two)):
+        if(string_two[j]==string_one[i]):
+            print(string_two[j])
+            count+=1
 print(count) """
+
+## Задача №13 Посчитайте, сколько раз символ встречается в строке.
+""" str = 'привет, я больше не скучаю'
+count=0
+for i in str:
+    if (i=='е'):
+        count+=1
+print(count) """
+
+## Задача №14 Дано количество секунд. Вывести результат в виде: дни:часы:минуты:секунды
+""" day=0
+hours=0
+min=0
+sec=0
+time=901532 
+if(time>=86400):
+    day=time//86400
+    time=time-(day*86400)
+    print(time)
+    if(time<86400):
+        hours=time//3600
+        time=time-(hours*3600)
+        if(time<3600):
+            min=time//60
+            time=time-(min*60)
+            if(time<60):
+                sec=round(time,2)  
+print('Дни={},Часы={},Минуты={},Секунды={} '.format(day,hours,min,sec)) """
+
+## Задача №15 Написать программу проверки, является ли строка палиндромом
+""" 
+word = input()
+if str(word) == str(word)[::-1] :
+    print("Palindrome")
+else:
+    print("Not Palindrome") """
