@@ -208,3 +208,11 @@ if str(word) == str(word)[::-1] :
     print("Palindrome")
 else:
     print("Not Palindrome") """
+
+"""     word = input()
+if str(word) == "".join(reversed(word)) :
+    print("Palindrome")
+else:
+    print("Not Palindrome") """
+
+
