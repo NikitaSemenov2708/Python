@@ -103,7 +103,7 @@ data.close() """
 
 ## Определить, присутствует ли в заданном списке строк, некоторое число 
 
-list= ['a,3,5,b,c,7,g']
+""" list= ['a,3,5,b,c,7,g']
 
 n=3
 
@@ -112,3 +112,78 @@ for i in range(len(list)):
         if a ==str(n):
             print("Присутствует")
             break
+    else:
+        print("Не присутствует") """
+
+## Реализовать алгоритм перемешивания списка, ## как смешивать то?? 
+
+import time
+
+result = time.localtime()
+generator=result.tm_wday
+print(generator) 
+
+
+list = []
+for i in range(-5,6):
+    list.append(i)
+print(list) 
+
+count=0
+
+for i in range(len(list)):
+    print(list) 
+    if (generator>0):
+        count=list[i]
+        list[i]=list[i]+generator
+        
+print(list)  
+
+
+## Реализовать алгоритм задания случайных чисел. Без использования встроенного генератора псевдослучайных чисел
+
+""" import time
+
+result = time.localtime()
+generator=result.tm_sec
+print(generator)
+
+ """
+
+##Найти сумму чисел списка стоящих на нечетной позиции
+""" from random import randint
+
+
+list = []
+for i in range(randint(1,3)):
+    list.append(randint(10,30))
+print(list)
+
+sum=0
+for i in range(0,len(list),2):
+    sum+=list[i]
+
+print(sum) """
+
+## Определить, позицию второго вхождения строки в списке либо сообщить, что её нет.
+#Примеры
+
+""" list=["йцу", "фыв", "ячс", "цук", "йцуrt"]
+search="йцу"
+count=0
+for i in range(len(list)):
+    if(list[i]==search):
+        count+=1
+        if (count==2):
+            print(i)
+            break
+
+if (count<2):
+    print('-1') """
+
+
+##список: ["qwe", "asd", "zxc", "qwe", "ertqwe"], ищем: "qwe", ответ: 3
+#список: ["йцу", "фыв", "ячс", "цук", "йцукен", "йцу"], ищем: "йцу", ответ: 5
+#список: ["йцу", "фыв", "ячс", "цук", "йцукен"], ищем: "йцу", ответ: -1
+#список: ["123", "234", 123, "567"], ищем: "123", ответ: -1
+#список: [], ищем: "123", ответ: -1
