@@ -117,27 +117,18 @@ for i in range(len(list)):
 
 ## Реализовать алгоритм перемешивания списка, ## как смешивать то?? 
 
-import time
+from random import randint
 
-result = time.localtime()
-generator=result.tm_wday
-print(generator) 
+list1 = list(range(0,30,2))
+list2 = []
+index=0
+print(list1)
 
-
-list = []
-for i in range(-5,6):
-    list.append(i)
-print(list) 
-
-count=0
-
-for i in range(len(list)):
-    print(list) 
-    if (generator>0):
-        count=list[i]
-        list[i]=list[i]+generator
-        
-print(list)  
+while len(list2)<len(list1):
+    index= randint(0, len(list1)-1)
+    if list1[index] not in list2:
+        list2.append(list1[index])
+print(list2)
 
 
 ## Реализовать алгоритм задания случайных чисел. Без использования встроенного генератора псевдослучайных чисел
