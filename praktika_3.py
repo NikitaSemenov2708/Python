@@ -117,7 +117,7 @@ for i in range(len(list)):
 
 ## Реализовать алгоритм перемешивания списка, ## как смешивать то?? 
 
-from random import randint
+""" from random import randint
 
 list1 = list(range(0,30,2))
 list2 = []
@@ -128,7 +128,7 @@ while len(list2)<len(list1):
     index= randint(0, len(list1)-1)
     if list1[index] not in list2:
         list2.append(list1[index])
-print(list2)
+print(list2) """
 
 
 ## Реализовать алгоритм задания случайных чисел. Без использования встроенного генератора псевдослучайных чисел
@@ -140,6 +140,14 @@ generator=result.tm_sec
 print(generator)
 
  """
+
+""" st=set()
+for i in range(10):
+    st.add(str(i))
+print(st)
+for i in st:
+    print(int(i))
+    break  """
 
 ##Найти сумму чисел списка стоящих на нечетной позиции
 """ from random import randint
