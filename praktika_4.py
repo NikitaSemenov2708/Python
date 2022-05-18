@@ -90,7 +90,7 @@ if d<0:
     
 ##Программа перевода чисел из 10 в 2
 
-number=8
+""" number=8
 
 n=''
 while(number!=0):
@@ -98,7 +98,7 @@ while(number!=0):
     number//=2
 print(n)
 
-
+ """
 
 
 
