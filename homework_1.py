@@ -77,7 +77,9 @@ print(pi)
 print(time()-start_time) """
 
 ##Составить список простых множителей натурального числа N
-simple_numbers=[] ##3,5,7,11,13,17
+
+
+""" simple_numbers=[] ##3,5,7,11,13,17
 for i in range(2,301):
     for j in range (2,i):
         if i%j==0:
@@ -85,6 +87,16 @@ for i in range(2,301):
     else: simple_numbers.append(i)
 
 n=int(input("Введите число n= "))
-if n%i==0:
-    n//=i
-    while n==i
+count=""
+for i in simple_numbers:  
+    if n%i==0:
+        count+=f"{i} "
+        n//=i
+        if n%2==0:
+            count+=" 2 "  
+            n//=2
+            print(f"число {n}")
+            print(f"Множитель {count}")        
+print(count)
+     """
+
